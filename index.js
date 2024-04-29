@@ -14,7 +14,6 @@ const pool = new Pool({
 
 app.use(express.json());
 
-
 app.post('/bruxos', async (req, res) => {
   const { nome, idade, casa, habilidade, status, patrono } = req.body;
   const query = 'INSERT INTO bruxos (nome, idade, casa, habilidade, status, patrono) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *';
