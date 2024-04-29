@@ -99,7 +99,7 @@ app.put('/varinhas/:id', async (req, res) => {
 
   try {
     await pool.query(query, values);
-    res.send('Successfully updated wand 🧹');
+    res.send('Varinha atualizada com sucesso');
   } catch (err) {
     console.error('error updating wand 🧹:', err);
     res.status(500).send('error updating wand 🧹');
@@ -143,8 +143,6 @@ app.get('/', async (req, res) => {
     res.send("harry potter cast the spell on you 🧙‍♂️🧹✨ : " + randomPhrase);
   });
 
-
-
 app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}🎀`);
+  console.log(`Servidor rodando na porta ${port} 🎀`);
 });
